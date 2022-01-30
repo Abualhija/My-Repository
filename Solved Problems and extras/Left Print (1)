@@ -1,0 +1,45 @@
+import pandas as pd 
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 5000)
+pd.set_option('display.colheader_justify', 'center')
+
+sellCars={ "toyota 2015": ["Prius","3500cc","Blue","4 g" , "Automatic gear ","leather seats ","available"],
+          "mazda 2014": ["M3","3400cc","Green","3 g" , "Automatic gear ","Cruise control ","available"],
+          "mercedes 2018": ["C63","6400cc","White","7 g" , "Automatic gear ", "Panorama","selled"],
+          "mitsubishi 2013": ["Lancer","1600cc","Silver","4 g" , "Automatic gear ","sensors","booked"],          
+          "Kia 2020": ["Rio","1800","Black","4 g" , "Manual gear ","Stearing Control","booked"]
+        }
+maxlen=0
+for i in sellCars :
+    for j in sellCars[i] :
+        if (len(str(j))) > maxlen :
+            maxlen=len(str(j))
+for i in sellCars:
+    qq=(len(sellCars[i]))
+
+for i in sellCars:
+    n=(i)
+    
+    
+    a=0
+    while(a<qq) :
+        z=0
+        for i in range(len(sellCars[n][a])) :
+            z +=1
+        m=0
+        while(m<=z):
+            l=[]
+            for i in range(z) :
+                l.append(sellCars[n][a][i])
+            
+            for j in range(maxlen-z):
+                l.append(" ")
+            x="".join(l)
+              
+            sellCars[n][a]=x 
+            m +=1
+        a +=1
+avbSell=["Model","Engien","Color","Condition","Additions","-","Status"]
+
+data=pd.DataFrame(sellCars ,index=(avbSell))
+print(data)

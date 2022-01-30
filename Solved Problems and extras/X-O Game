@@ -1,0 +1,260 @@
+playerOneWin=0
+playerOneLose=0
+playerTwoWin=0
+playerTwoLose=0
+draw=0
+def result (playArea): 
+
+    while(1):
+        c=0
+        
+        global playerOneWin 
+        global playerOneLose
+        global playerTwoWin 
+        global playerTwoLose
+        if(playArea[0]==playArea[1])and (playArea[0]==playArea[2]) :
+            if(playArea[0]=="X" or playArea[0]=="x"):
+                playerOneWin +=1
+                c=1
+
+            else:
+                playerTwoWin +=1
+                c=1
+
+        if(playArea[3]==playArea[4])and (playArea[3]==playArea[5]):
+            if(playArea[3]=="X" or playArea[3]== "x"):
+                playerOneWin +=1
+                c=1
+            else:
+                playerTwoWin +=1
+                c=1
+        if(playArea[6]==playArea[7])and (playArea[6]==playArea[8]):
+            if(playArea[6]=="X" or playArea[6]=="x"):
+                playerOneWin +=1
+                c=1
+            else:
+                playerTwoWin +=1
+                c=1
+        if(playArea[0]==playArea[3])and (playArea[0]==playArea[6]):
+            if(playArea[0]=="X" or playArea[0]=="x"):
+                playerOneWin +=1
+                c=1
+            else:
+                playerTwoWin +=1
+                c=1
+        if(playArea[1]==playArea[4])and (playArea[1]==playArea[7]):
+            if(playArea[1]=="X" or playArea[1]=="x"):
+                playerOneWin +=1
+                c=1
+                
+            else:
+                playerTwoWin +=1
+                c=1
+        if(playArea[2]==playArea[5])and (playArea[2]==playArea[8]):
+            if(playArea[2]=="X" or playArea[2]=="x"):
+                playerOneWin +=1
+                c=1
+            else:
+                playerTwoWin +=1
+                c=1
+        if(playArea[0]==playArea[4])and (playArea[0]==playArea[8]):
+            if(playArea[0]=="X" or playArea[0]=="x"):
+                playerOneWin +=1
+                c=1
+            else:
+                playerTwoWin +=1
+                c=1
+        if(playArea[2]==playArea[4])and (playArea[2]==playArea[6]):
+            if(playArea[2]=="X" or playArea[2]=="x"):
+                playerOneWin +=1
+                c=1
+            else:
+                playerTwoWin +=1
+                c=1
+        break
+    return(c)
+
+class game:
+    def __init__ (self,playerOne,playerTwo,PlayerOneChoice,PlayerTwoChoice):   
+        self.playerOne=playerOne
+        self.playerTwo=playerTwo
+        self.PlayerOneChoice=PlayerOneChoice
+        self.PlayerTwoChoice=PlayerTwoChoice
+
+        
+    def pri(self):
+        while(1):
+            playArea=[1,2,3,4,5,6,7,8,9]
+            print(playArea[0:3])
+            print(playArea[3:6])
+            print(playArea[6:])
+        
+            c=0
+            while (1):
+                print("\n\n")
+                print(str(self.playerOne)+"'s turn :")
+                
+                while (1):
+                    pick=int(input("enter the place of " + str(self.PlayerOneChoice)+ " :"))
+                    if(pick<1 or pick>9):
+                        print("you entered wrong number , please reenter from the right indices")
+                        continue
+                    if (playArea[pick-1] != self.PlayerOneChoice and playArea[pick-1] != self.PlayerTwoChoice):
+                        playArea[pick-1]=str(self.PlayerOneChoice)
+                        
+                        
+                        
+                            
+
+                        break
+                    else:
+                        print("\nthe place you want to put the symbol in it , already taken before.")
+                        print("please choose another place")
+                        print("\n\n")
+                        print(playArea[0:3])
+                        print(playArea[3:6])
+                        print(playArea[6:])
+                        continue
+                print("\n\n")
+                c=c+1
+                if(c==9):
+                    break
+                print(playArea[0:3])
+                print(playArea[3:6])
+                print(playArea[6:])
+                print("\n\n")
+                xx=(result(playArea))
+                if(xx==1):
+                    game.report(self)      
+
+                    break
+                
+        
+                print(str(self.playerTwo)+"'s turn :")
+                
+                while (1):
+                    pick=int(input("enter the place of " + str(self.PlayerTwoChoice)+ " :"))
+                    if(pick<1 or pick>9):
+                        print("you entered wrong number , please reenter from the right indices")
+                        continue
+                    if (playArea[pick-1] != self.PlayerOneChoice and playArea[pick-1] != self.PlayerTwoChoice):
+                        playArea[pick-1]=str(self.PlayerTwoChoice)
+                    
+
+                        
+                        
+
+                        break
+                    else:
+                        print("\nthe place you want to put the symbol in it , already taken before.")
+                        print("please choose another place")
+                        print("\n\n")
+                        print(playArea[0:3])
+                        print(playArea[3:6])
+                        print(playArea[6:])
+                        continue
+
+                print("\n\n")
+                c=c+1
+                print(playArea[0:3])
+                print(playArea[3:6])
+                print(playArea[6:])
+                xx=(result(playArea))
+                
+                    
+                if(xx==1):
+                    game.report(self)      
+                    break
+                
+            print("Final graph  :\n")
+            print(playArea[0:3])
+            print(playArea[3:6])
+            print(playArea[6:])
+            global draw 
+
+            if(xx==0):
+                    draw +=1
+            game.report(self)      
+                
+        
+            print("\nif you want Remach press * , if you want to exit press any kye :")
+            n=input()
+            if(n=="*"):
+                continue
+            else :
+                break
+
+    def report(self):
+        print("-------------------------")
+        print("\nResults: \n")
+        playerTwoLose=playerOneWin
+        playerOneLose=playerTwoWin
+
+        print(playerOne + " : ")
+        print("win "+str(playerOneWin))
+        print("lose "+str(playerOneLose)+"\n")
+        print(playerTwo + " : ")
+        print("win "+str(playerTwoWin))
+        print("lose "+str(playerTwoLose)+"\n")
+        print("Draw "+str(draw))
+        
+    def finalPoints(self):
+        playerOneLose=playerTwoWin
+        playerTwoLose=playerOneWin
+        print("\n##############################################")
+        print("          ---> Final Results with Points <---          ")
+        print("1-Each Win = +100 point")
+        print("2-Each Lose = -50 point")
+        print("3-Each Draw = 0 point")
+        print("------------")
+       
+        print(playerOne + " : ")
+        print("win "+str(playerOneWin)+"--> "+str(playerOneWin*100)+str(" points"))
+        print("Lose "+str(playerOneLose)+"--> "+str(playerOneLose*-50)+str(" points"))
+        print("Draw "+str(draw)+"-->" +str(" 0 points"))
+        print("Final Result :"  + str((playerOneWin*100)+(playerOneLose*-50)))
+        print("------------")
+        print(playerTwo + " : ")
+        print("win "+str(playerTwoWin)+"--> "+str(playerTwoWin*100)+str(" points"))
+        print("Lose "+str(playerTwoLose)+"--> "+str(playerTwoLose*-50)+str(" points"))
+        print("Draw "+str(draw)+"-->" +str(" 0 points"))
+        print("Final Result :"  + str((playerTwoWin*100)+(playerTwoLose*-50)))
+        print("------------")
+        print("the winner is :")
+        p1Point=((playerOneWin*100)+(playerOneLose*-50))
+        p2Point=((playerTwoWin*100)+(playerTwoLose*-50))
+        if(p1Point>p2Point): 
+            print(playerOne)            
+        
+        elif p1Point<p2Point:
+            print(playerTwo)
+        elif p1Point==p2Point :
+            print(playerOne + " and " + playerTwo)
+        else : 
+            print(playerOne + " and " + playerTwo)
+        print("\n##############################################")
+
+##################################################################################
+playerOne=input("please enter the first player's Name : ")
+while(1):
+        
+    PlayerOneChoice=input(str(playerOne) + " , Please enter your choice between X and O : ")
+    if(PlayerOneChoice not in "X x O o" ):
+           print("you entered Wrong choice , please reenter")
+    else:
+            break
+            
+playerTwo=input("please enter the second player's Name : ")
+if (PlayerOneChoice =="X") :
+        PlayerTwoChoice= "O"
+elif (PlayerOneChoice =="x") :
+         PlayerTwoChoice= "o"
+elif (PlayerOneChoice =="O") :
+        PlayerTwoChoice= "X"
+elif (PlayerOneChoice =="o") :
+         PlayerTwoChoice= "x"
+         
+print("\n[ "+ str(PlayerTwoChoice)+" ]  was automatically selected for  "+ str(playerTwo) +"\n\n")
+a=game(playerOne,playerTwo,PlayerOneChoice,PlayerTwoChoice)
+a.pri()
+a.finalPoints()

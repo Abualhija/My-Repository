@@ -1,0 +1,47 @@
+import pandas as pd 
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 5000)
+pd.set_option('display.colheader_justify', 'center')
+
+sellCars={ "toyota 2015": ["Prius","3500cc","Blue","4 g" , "Automatic gear ","leather seats ","available"],
+          "mazda 2014": ["M3","3400cc","Green","3 g" , "Automatic gear ","Cruise control ","available"],
+          "mercedes 2018": ["C63","6400cc","White","7 g" , "Automatic gear ", "Panorama","available"],
+          "mitsubishi 2013": ["Lancer","1600cc","Silver","4 g" , "Automatic gear ","sensors","available"],          
+          "Kia 2020": ["Rio","1800","Black","4 g" , "Manual gear ","Stearing Control","available"]
+        }
+def printLeft(dicc,ind,y):
+    maxlen=0
+    dic=dicc
+    for i in dic :
+        for j in dic[i]:
+            if len(j)> maxlen:
+                maxlen=len(j)
+            else :
+                continue
+    m=0
+    for i in dic :
+        for j in range(len(dic[i])):
+           m=j+1     
+    for i in dic:
+            for mm in range((m)):
+                y="{:>%d}"%(maxlen-len(dic[i][mm]))
+                xx=y.format("")
+
+                dic[i][mm]=dic[i][mm]+str(xx)
+    data=pd.DataFrame(dic,index=ind)
+    if(y==1):
+        print(data.T)
+    else : 
+        print(data.T)
+
+    for i in dic :
+        for j in range(len(dic[i])):
+             dic[i][j]=dic[i][j].rstrip(" ")
+
+check=dict({})
+avbSell=["Model","Engien","Color","Condition","Additions","Price","Status"]
+
+for i in  sellCars:
+    if sellCars[i][-1]=="available" :
+        check[i]=sellCars[i]
+printLeft(check,avbSell,0)
