@@ -272,6 +272,7 @@ ul {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   pointer-events: none;
+  display:block;
 }
 
 .color-icon.open .color-box {
@@ -316,6 +317,7 @@ ul {
   cursor: pointer;
   position: relative;
   right: 10px;
+  opacity: 1;
 }
 
 .color-box .color-switchers .btn {
@@ -368,4 +370,9 @@ ul {
 
 .color-icon.open .icons .arrow {
   transform: rotate(-180deg);
+}
+
+
+.color-box.active{
+  opacity: 0;
 }

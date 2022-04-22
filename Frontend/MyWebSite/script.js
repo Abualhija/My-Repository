@@ -1,12 +1,19 @@
 let colorIcons = document.querySelector(".color-icon");
 let  icons = document.querySelector(".color-icon .icons");
 
-
 icons.addEventListener("click", () => {
   colorIcons.classList.toggle("open");
-})
+});
 
 
+
+let resetButt = document.querySelector(".color-box")
+
+resetButt.addEventListener('click',reset);
+function reset() {
+      resetButt.classList.toggle("activee");
+      colorIcons.classList.remove("open")
+}
 
 
 let buttons = document.querySelectorAll(".btn");
@@ -69,6 +76,7 @@ resetButton.addEventListener("click", () => {
   logo.style.setProperty('color', "#3a6cf4");
   button.style.setProperty('background-color', "#3a6cf4");
   button.style.setProperty('color', "#fff");
+
   for (i = 0; i < nav_bars.length; i++) {
     nav_bars[i].style.setProperty('color', "#3a6cf4");
   }
