@@ -1,5 +1,11 @@
 let colorIcons = document.querySelector(".color-icon");
-let  icons = document.querySelector(".color-icon .icons");
+let icons = document.querySelector(".color-icon .icons");
+
+let resetButt = document.querySelector(".color-box")
+let buttons = document.querySelectorAll(".btn");
+
+let about = document.querySelector(".about-me");
+let about_detail = document.querySelector(".about-detail");
 
 icons.addEventListener("click", () => {
   colorIcons.classList.toggle("open");
@@ -7,16 +13,21 @@ icons.addEventListener("click", () => {
 
 
 
-let resetButt = document.querySelector(".color-box")
+about.addEventListener('click', aboutt);
 
-resetButt.addEventListener('click',reset);
-function reset() {
-      resetButt.classList.toggle("activee");
-      colorIcons.classList.remove("open")
+function aboutt() {
+  about_detail.classList.toggle("active-about");
 }
 
 
-let buttons = document.querySelectorAll(".btn");
+resetButt.addEventListener('click', reset);
+
+function reset() {
+  resetButt.classList.toggle("activee");
+  colorIcons.classList.remove("open")
+}
+
+
 
 for (var button of buttons) {
   button.addEventListener("click", (color) => {
@@ -33,7 +44,9 @@ for (var button of buttons) {
     target.classList.add("active");
 
     header = document.querySelector(".header");
-    button = document.querySelector(".button-main");
+    // button = document.querySelector(".button-main");
+    about_me = document.querySelector(".about-me");
+
     logo = document.querySelector(".logo");
     nav_bars = document.querySelectorAll('.nav_bar a');
     skills = document.querySelectorAll('.title');
@@ -49,8 +62,11 @@ for (var button of buttons) {
 
 
     header.style.setProperty('background-color', colors[0])
-    button.style.setProperty('background-color', colors[0])
-    button.style.setProperty('color', colors[1])
+    // button.style.setProperty('background-color', colors[0])
+    // button.style.setProperty('color', colors[1])
+    about_me.style.setProperty('background-color', colors[0])
+    about_me.style.setProperty('color', colors[1])
+
     logo.style.setProperty('color', colors[1])
     for (i = 0; i < nav_bars.length; i++) {
       nav_bars[i].style.setProperty('color', colors[1]);
@@ -74,8 +90,11 @@ resetButton = document.querySelector(".reset");
 resetButton.addEventListener("click", () => {
   header.style.setProperty('background-color', "#f2f2f2");
   logo.style.setProperty('color', "#3a6cf4");
-  button.style.setProperty('background-color', "#3a6cf4");
-  button.style.setProperty('color', "#fff");
+  about_me
+  // button.style.setProperty('background-color', "#3a6cf4");
+  // button.style.setProperty('color', "#fff");
+  about_me.style.setProperty('background-color', "#3a6cf4");
+  about_me.style.setProperty('color', "#fff");
 
   for (i = 0; i < nav_bars.length; i++) {
     nav_bars[i].style.setProperty('color', "#3a6cf4");
