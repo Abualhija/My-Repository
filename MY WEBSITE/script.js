@@ -1,3 +1,9 @@
+
+// $('.about-detail').hide();
+$(document).ready(function(){
+
+
+
 let colorIcons = document.querySelector(".color-icon");
 let icons = document.querySelector(".color-icon .icons");
 
@@ -6,18 +12,30 @@ let buttons = document.querySelectorAll(".btn");
 
 let about = document.querySelector(".about-me");
 let about_detail = document.querySelector(".about-detail");
-
 icons.addEventListener("click", () => {
   colorIcons.classList.toggle("open");
 });
 
 
 
-about.addEventListener('click', aboutt);
+// $('.about-me').click(function(){
+//   $('.about-detail').toggle();
+// });
 
-function aboutt() {
-  about_detail.classList.toggle("active-about");
-}
+$('.about-me').on({
+  mouseenter:function(){
+    $('.about-detail').css('opacity','1');
+  },
+  mouseleave:function(){
+    $('.about-detail').css('opacity','0');
+    },
+})
+//
+// about.addEventListener('click', aboutt);
+//
+// function aboutt() {
+//   about_detail.classList.toggle("active-about");
+// }
 
 
 resetButt.addEventListener('click', reset);
@@ -113,3 +131,13 @@ resetButton.addEventListener("click", () => {
 
 
 })
+});
+
+
+// $(document).ready(function(){
+//   $(".about-me2").click(function(){
+//     $(".about-detail").toggle({
+//       width: "toggle"
+//     });
+//   });
+// });
