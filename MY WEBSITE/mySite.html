@@ -8,12 +8,13 @@
   <script src="https://kit.fontawesome.com/369d23c8c0.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
   <title>Suhaib's Website</title>
 </head>
 
 <body>
-
+<div class="bbody">
   <header class='header'>
     <a href="#home" class='logo'>suhaib</a>
 
@@ -48,9 +49,11 @@
   <section id="home" class='main'>
     <div class="all-main"style="width:100%;max-height:100px;margin-top:-300px">
       <div class="sec1" >
-        <h2>Hello I'm Suhaib <br> <span>Web Developer</span></h2>
+        <h2 >Hello I'm Suhaib <br> <span>Web Developer</span></h2>
         <h3>"Talk is Cheap , <br>I will show you the code"</h3>
         <button class="about-me">About me <span class="overlay"></span> </button>
+        <!-- <button type="button"class="about-me2">About me  </button> -->
+
         <br>
         <br>
         <br>
@@ -117,7 +120,7 @@
         </div>
         <div class="info">
           <h3>Frontend</h3>
-          <p>HTML <br>CSS , BootStrap <br>Javascript, Jquery, DOM, React</p>
+          <p>HTML <br>CSS , BootStrap <br>Javascript, Jquery, DOM</p>
 
         </div>
       </div>
@@ -130,7 +133,7 @@
         </div>
         <div class="info">
           <h3>Backend</h3>
-          <p>Python, Django <br>Javascript<br>PHP</p>
+          <p>Python, Django <br>Javascript, node.js<br>PHP</p>
 
         </div>
       </div>
@@ -156,6 +159,31 @@
   <section id="projects" class="projects">
     <h2 class='title'>Projects</h2>
     <div class="content">
+      <div class="project-card">
+        <div class="project-img" style="backGround-color:#f2f2f2">
+
+          <img src="images/React JS.jpg" alt="">
+        </div>
+        <div class="project-content">
+          <strong class="project-title">
+
+            <p class="project-item"> React JS </p>
+            <span>Website Transformation</span>
+          </strong>
+          <div class="project-details">
+            <p style="color:black">Convert website homepage from normal HTML and CSS, into a Fully responsive React JS web application </p>
+            <br>
+            <p>Provides ease in the process of modification and flexibility in dealing with elements</p><br>
+            <br>
+            <div style="position: relative; bottom: -100px;">
+            <a class="project-link" href="https://abualhija.github.io/React/" target="_blank"><strong style="font-weight:1000">Demo</strong></a><br>
+            <a class="project-link" href="https://github.com/Abualhija/React-App" target="_blank">Source code </a>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
 
       <div class="project-card">
         <div class="project-img" style="backGround-color:#f2f2f2">
@@ -185,24 +213,6 @@
 
       <div class="project-card">
         <div class="project-img">
-          <img src="images/YoutubeDownloader.png" alt="">
-        </div>
-        <div class="project-content">
-          <strong class="project-title">
-
-            <p class="project-item"> Python </p>
-            <span>YouTube Downloader</span>
-          </strong>
-          <div class="project-details">
-            <p> Downloads any YouTube video with any available quality and in mp4 or mp3 format </p><br>
-            <a class="project-link" href="https://github.com/Abualhija/My-Repository/tree/main/Python/YouTube%20Downloader" target="_blank">Source code </a>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="project-card">
-        <div class="project-img">
           <img src="images/YouTube-clone.png" alt="">
         </div>
         <div class="project-content">
@@ -214,8 +224,11 @@
           <div class="project-details">
 
             <span> Cloning the homepage of YouTube using html and css </span><br><br>
-            <a class="project-link" href="https://abualhija.github.io/portfolio/YouTube_index" target="_blank"><strong style="font-weight:1000">Website</strong></a><br>
-            <a class="project-link" href="https://github.com/Abualhija/My-Repository/tree/main/Frontend/YouTube%20clone" target="_blank">Source code</a>
+            <div style="position:relative ;bottom:-210px;">
+              <a class="project-link" href="https://abualhija.github.io/portfolio/YouTube_index" target="_blank"><strong style="font-weight:1000">Demo</strong></a><br>
+              <a class="project-link" href="https://github.com/Abualhija/My-Repository/tree/main/Frontend/YouTube%20clone" target="_blank">Source code</a>
+  
+            </div>
 
           </div>
         </div>
@@ -234,7 +247,7 @@
           <div class="project-details">
 
             <span> Cloning the homepage of Twitter using html and css</span><br><br>
-            <a class="project-link" href="https://abualhija.github.io/portfolio/twitter_index" target="_blank"><strong style="font-weight:1000">Website</strong></a><br>
+            <a class="project-link" href="https://abualhija.github.io/portfolio/twitter_index" target="_blank"><strong style="font-weight:1000">Demo</strong></a><br>
             <a class="project-link" href="https://github.com/Abualhija/My-Repository/tree/main/Frontend/Twitter%20clone" target="_blank">Source code </a>
 
           </div>
@@ -255,7 +268,7 @@
           <div class="project-details">
 
             <span> Drawing Homer character from Simpsons cartoon using only CSS</span><br>
-            <a class="project-link" href="https://abualhija.github.io/portfolio/simp_index" target="_blank"><strong style="font-weight:1000">Website</strong></a><br>
+            <a class="project-link" href="https://abualhija.github.io/portfolio/simp_index" target="_blank"><strong style="font-weight:1000">Demo</strong></a><br>
             <a class="project-link" href="https://github.com/Abualhija/My-Repository/tree/main/Frontend/Simpsons" target="_blank">Source code </a>
 
           </div>
@@ -276,7 +289,7 @@
           <div class="project-details">
 
             <span> Drawing Ferb cartoon character using only CSS </span><br><br>
-            <a class="project-link" href="https://abualhija.github.io/portfolio/freb_index" target="_blank"><strong style="font-weight:1000">Website</strong></a><br>
+            <a class="project-link" href="https://abualhija.github.io/portfolio/freb_index" target="_blank"><strong style="font-weight:1000">Demo</strong></a><br>
             <a class="project-link" href="https://github.com/Abualhija/My-Repository/tree/main/Frontend/Ferb" target="_blank">Source code </a>
 
           </div>
@@ -326,6 +339,7 @@
   </footer>
 
   <script src='script.js'></script>
+  </div>
 </body>
 
 </html>
