@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  background-color: #ffffff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header start  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+.menu {
+  display: flex;
+  color: #686777;
+}
+
+.menu p {
+  margin-left: 50px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.menu p:hover {
+  color: #6292f8;
+  cursor: pointer;
+}
+
+/* Header end */
+
+/* Email start */
+.email {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  font-family: "Raleway", sans-serif;
+}
+
+.email-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.decoration-image {
+  width: 50%;
+}
+.decoration-image img {
+  width: 100%;
+}
+
+.email-info .title {
+  font-size: 2.5em;
+  color: #08053a;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  padding-top: 75px;
+}
+
+.discription {
+  color: #464553;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 15px 15px 15px 0;
+  line-height: 1.5;
+}
+
+.email-submit input[type="email"] {
+  padding: 10px;
+  width: 45%;
+}
+.email-submit input[type="submit"] {
+  padding: 12px;
+  width: 30%;
+  background-color: #2f65f9;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.email-submit input[type="submit"]:hover {
+  background-color: #6b9bff;
+  cursor: pointer;
+}
+/* Email end */
+
+/* Productivity start */
+.productivity {
+  padding-bottom: 100px;
+  background-color: #f8f8fe;
+}
+.productivity .prod-body {
+  background-color: #f8f8fe;
+  height: 500px;
+  margin-top: -5px;
+  padding-top: 50px;
+}
+
+.prod-image img {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.prod-body {
+  display: flex;
+}
+
+.prod-details {
+  width: 50%;
+  font-family: "Raleway", sans-serif;
+  padding: 0 0 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.prod-detail-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.prod-details .title {
+  font-size: 2.3em;
+  color: #08053a;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.Fylo-describe {
+  width: 85%;
+  margin: 25px 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.Fylo-describe p {
+  font-size: 1em;
+  font-weight: 700;
+  color: #454453;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.Fylo-describe a {
+  display: inline-flex;
+  align-items: flex-end;
+  text-decoration: none;
+  border-bottom: 1px solid #60baaa;
+  padding-bottom: 5px;
+  color: #60baaa;
+  font-weight: 700;
+}
+.Fylo-describe a:hover {
+  color: #8fd9ca;
+  cursor: pointer;
+}
+.Fylo-describe a img {
+  margin-left: 5px;
+}
+
+.FyloQuote {
+  background-color: white;
+  border-radius: 5px;
+  width: 50%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.FyloQuote img {
+  width: 7%;
+  height: 80%;
+  border-radius: 50%;
+}
+.quote-details img {
+  width: 10%;
+  height: 100%;
+}
+.FyloQuote p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8em;
+  padding-top: 5px;
+  line-height: 1.7;
+}
+
+.quote-details {
+  margin-top: 10px;
+  display: flex;
+  height: 50%;
+}
+.person-name {
+  display: flex;
+  flex-direction: column;
+  height: 20;
+  font-size: 0.7em;
+  margin-left: 5px;
+  font-family: "Raleway", sans-serif;
+}
+
+.person-name :first-child {
+  color: #2a2744;
+  font-weight: bold;
+}
+/* Productivity end */
+
+/* early-access start */
+
+.early-access {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  /* margin-top: 100px; */
+  font-family: "Raleway", sans-serif;
+  background-color: #575989;
+  color: white;
+  padding-bottom: 70px;
+}
+
+.early-access-details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+}
+
+.early-access-details .details-title {
+  font-size: 2em;
+  font-weight: 700;
+}
+.early-access-details .details-data {
+  font-size: 1.1em;
+  width: 85%;
+  padding-top: 20px;
+}
+.early-acess-email {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 25px;
+}
+.early-email-input input[type="email"] {
+  width: 100%;
+  padding: 18px 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.1em;
+}
+
+.early-email-input input:focus {
+  outline: none;
+}
+
+.early-email-submit input[type="submit"] {
+  width: 50%;
+  margin-top: 10px;
+  padding: 18px 10px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  background-color: #2f65f9;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.early-email-submit input[type="submit"]:hover {
+  background-color: #6b9bff;
+}
+/* early-access end */
+
+/* footer start */
+.footer {
+  background-color: #07043b;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 100px 50px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.fotter-logo svg {
+  cursor: pointer;
+}
+.fotter-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-num {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-num div {
+  cursor: pointer;
+}
+.contact-icon {
+  display: flex;
+  align-items: center;
+}
+.contact-num img {
+  padding-right: 20px;
+}
+.contact-email {
+  margin-top: 20px;
+}
+.about p,
+.contact p {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.social i {
+  font-size: 3em;
+  margin-right: 25px;
+  cursor: pointer;
+}
+.contact-num,
+.about,
+.contact,
+.social {
+  width: 20%;
+  margin-top: 10px;
+}
+
+.contact-num div:hover,
+.about p:hover,
+.contact p:hover,
+.social i:hover {
+  color:#6C9CFF
+}
+/* footer end */
