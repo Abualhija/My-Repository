@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Typing Speed Test</title>
+  </head>
+  <body>
+    <div class="welcome">
+      <div class="welcome-content">
+        <p>Please Pick Game Level To Start Playing </p>
+        <form class="form">
+          <input type="radio" name="levels" value="Easy" />Easy<br />
+
+          <input type="radio" name="levels" value="Medium" />Medium<br />
+
+          <input type="radio" name="levels" value="Hard" />Hard<br /><br />
+        </form>
+        <div class="button-form" onclick="display()">Submit</div>
+        <div id="disp"></div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="name">Typing Speed Test</div>
+      <div class="container">
+        <div class="message">
+          Playing On
+          <span class="lvl"></span> Level , You Have
+          <span class="seconds"></span> Seconds To Write Each Word.<br>(Extra 3 Seconds Only For First Word)
+        </div>
+        <div class="start">Start Typing</div>
+        <div class="word"></div>
+        <input type="text" class="input-class" />
+        <div class="next-word">Next Word Will Show Up Here</div>
+        <div class="control">
+          <div class="time">Time Left : <span></span> Seconds</div>
+          <div class="score">
+            Your Score Is : <span class="total-score"></span> Out Of
+            <span class="max-score"></span>
+          </div>
+        </div>
+        <div class="finish"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
