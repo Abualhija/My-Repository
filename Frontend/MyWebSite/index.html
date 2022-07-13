@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/369d23c8c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  
+    <title>WebSite</title>
+  </head>
+  <body>
+    <div class="container-settingBOX">
+      <div class="setting-box-overlay"></div>
+      <div class="setting-box">
+        <i class="fa-solid fa-circle-right settings-gear"></i>
+        <div class="settings-container">
+          <div class="options-box">
+            <h4>Colors</h4>
+            <ul class="colors-list">
+              <li class="active" data-color="#3A6CF4"></li>
+              <li data-color="#e91e63"></li>
+              <li data-color="#009688"></li>
+              <li data-color="#ff9800"></li>
+              <li data-color="#92db1b"></li>
+            </ul>
+          </div>
+          <div class="options-box">
+            <h4 class="back-ground">Random Backgrounds</h4>
+            <div class="random-background">
+              <span class="yes active" data-bgrndm="yes">Yes</span>
+              <span class="no" data-bgrndm="no">No</span>
+            </div>
+          </div>
+          <div class="options-box">
+            <h4>Show Bullets</h4>
+            <div class="bullets-option">
+              <span class="show active" data-display="show">Yes</span>
+              <span class="hide" data-display="hide">No</span>
+            </div>
+          </div>
+          <div class="options-box">
+            <h4>Fixed navigation</h4>
+            <div class="fixed-navbar-options">
+              <span class="fixed" data-display="fixed">Yes</span>
+              <span class="not-fixed active" data-display="not-fixed">No</span>
+            </div>
+          </div>
+          <div class="options-box reset">
+            <h4>Reset Settings</h4>
+            <span class="reset-settings">Reset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navBullets">
+      <div class="bullet" data-section=".main-container">
+        <div class="toolTip">Home</div>
+      </div>
+      <div class="bullet" data-section=".about-us">
+        <div class="toolTip">About</div>
+      </div>
+      <div class="bullet" data-section=".features">
+        <div class="toolTip">Features</div>
+      </div>
+      <div class="bullet" data-section=".skills-main-container">
+        <div class="toolTip">Skills</div>
+      </div>
+      <div class="bullet" data-section=".projects-gallery">
+        <div class="toolTip">Projects</div>
+      </div>
+      <div class="bullet" data-section=".timeline-container">
+        <div class="toolTip">TimeLine</div>
+      </div>
+      <div class="bullet" data-section=".testimonials">
+        <div class="toolTip">Testimonials</div>
+      </div>
+      <div class="bullet" data-section=".contact-container">
+        <div class="toolTip">Contact</div>
+      </div>
+    </div>
+    <div class="change-nav-colors">
+      <div class="main-container">
+        <div class="overlay"></div>
+        <div class="header-area">
+          <!-- <div class="logo">SUHAIB</div> -->
+          <div class="logo-content">
+            <h2>Suhaib</h2>
+            <h2>Suhaib</h2>
+          </div>
+        
+          <ul class="links">
+            <li>
+              <a href="#" data-section=".main-container" class="active">HOME</a>
+            </li>
+            <li>
+              <a href="#" data-section=".about-us">About</a>
+            </li>
+            <li><a href="#" data-section=".features">Features</a></li>
+            <li>
+              <a href="#" data-section=".skills-main-container">Skills</a>
+            </li>
+            <li>
+              <a href="#" data-section=".projects-gallery">Projects</a>
+            </li>
+            <li><a href="#" data-section=".timeline-container">Timeline</a></li>
+            <li><a href="#" data-section=".testimonials">Testimonials</a></li>
+            <li><a href="#" data-section=".contact-container">Contact</a></li>
+          </ul>
+          <button class="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="introduction-text">
+          <h1>I'm a <span> Creative</span> Web Developer</h1>
+          <p>
+            " Talk Is Cheap , See The <span> Code</span> "
+          </p>
+        </div>
+      </div>
+
+      <div class="about-us">
+        <div class="about-container">
+          <div class="about-info">
+            <h2>About Me</h2>
+            <div class="about-details">
+              <div class="infos">
+                <h3>Suhaib Abedalla , I'm 25. </h3>
+                <p>Highly dedicated Web developer and Python Programmer,
+                  looking to use my skills in FrontEnd , BackEnd and Python to gain the
+                  right experiences that will enable me to go deep at programming field and releaseing my
+                  creativity in this field.<br><br>
+                  Yes i'm Civil engineer , Career shift won't be a problem for
+                  me,The proof of my words is that you are reading
+                  these little paragraphs,because it's my true passion.
+                  <br><br></p>
+                  <span class="qoute">
+                    <p>" It's never too late to start over ,<br>if you weren't happy Yesterday ,<br>make something different today ,<br>to be happy tomorrow.
+                    "</p>
+                  </span>
+              </div>
+              <div class="about-image">
+                <img
+                  src="https://www.webtopsolutions.org/img/services/website-design.png"
+                  alt=""
+                />
+              </div>  
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="features">
+        <h2>Features</h2>
+        <div class="features-container">
+          <div class="feature-box">
+            <i class="fa-solid fa-code feature-Icon"></i>
+            <h3>FrontEnd</h3>
+            <p>
+              HTML5. <br /><br />
+              CSS3 <br /> BootStrap / Responsive.<br /><br />
+              Javascript <br /> React JS / DOM / JQuery.<br /><br />
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fa-brands fa-python feature-Icon"></i>
+            <h3>BackEnd</h3>
+            <p>
+              Python / Django.<br /><br />
+              <!-- - Javascript / Nodejs.<br /><br /> -->
+              PHP.<br /><br />
+              C++.<br /><br />
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fa-solid fa-database feature-Icon"></i>
+            <h3>Database</h3>
+            <p>
+              MySQL : <br /><br />
+              PostgreSQL.<br /><br />
+              MS SQL Server.<br /><br />
+            </p>        
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-main-container">
+        <div class="skills-container">
+          <div class="skills">
+            <h2>Skills </h2>
+            <div class="skill-box">
+              <div class="skill-name">HTML</div>
+              <div class="skill-progress">
+                <p data-progress="95%"> 95%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">CSS</div>
+              <div class="skill-progress">
+                <p data-progress="95%">95%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">Responsive Design</div>
+              <div class="skill-progress">
+                <p data-progress="85%">85%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">Javascript</div>
+              <div class="skill-progress">
+                <p data-progress="90%">90%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">Reactjs</div>
+              <div class="skill-progress">
+                <p data-progress="90%">90%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">Python</div>
+              <div class="skill-progress">
+                <p data-progress="95%">95%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">Django</div>
+              <div class="skill-progress">
+                <p data-progress="50%">50%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">PHP</div>
+              <div class="skill-progress">
+                <p data-progress="50%">50%</p>
+              </div>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name">MySQL</div>
+              <div class="skill-progress">
+                <p data-progress="85%">80%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-gallery">
+        <div class="gallery-continer">
+          <h2>Projects</h2>
+          <p class="attention">*Press on the photo to see project details</p>
+          <div class="image-box">
+            <img
+              src="Images/projectsOut/React JS.jpg"
+              data-index="1"
+              alt="Website Transformation"
+            />
+            
+            <img
+              src="Images/projectsOut/spd.png"
+              data-index="2"
+              alt="Typing Speed Test"
+            />
+            <img
+              src="Images/projectsOut/Memory_Game.png"
+              data-index="3"
+              alt="Cars Memory Game"
+            />
+            <img src="Images/projectsOut/fylo.png" data-index="4" alt="Fylo" />
+            <img
+              src="Images/projectsOut/YouTube-clone.png"
+              data-index="5"
+              alt="Youtube Clone"
+            />
+            <img
+              src="Images/projectsOut/Twitter-clone.png"
+              data-index="6"
+              alt="Twitter Clone"
+            />
+            <img
+              src="Images/projectsOut/homer.png"
+              data-index="7"
+              alt="Homer Draw"
+            />
+            <img
+              src="Images/projectsOut/freb.png"
+              data-index="8"
+              alt="Ferb Draw"
+            />
+            <img
+              src="Images/projectsOut/carsShowRoom.jpg"
+              data-index="9"
+              alt="Cars ShowRoom"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        <h2>TimeLine</h2>
+
+        <div class="timeline-content">
+          <div class="year">2014</div>
+          <div class="left clearfix">
+            <div class="content">
+              <h3>University</h3>
+              <p>
+                Started Bachelor's degree in Civil Engineering at Yarmouk University. 
+              </p>
+            </div>
+          </div>
+          <div class="right clearfix">
+            <div class="content">
+              <h3>First Programming Language</h3>
+              <p>
+                Started learning C++ as a subject at university with A+ degree.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-content pt">
+          <div class="year">2019</div>
+          <div class="left clearfix">
+            <div class="content">
+              <h3>University Graduation</h3>
+              <p>
+                Grduated as a Civil engineer with a Very Good Grade.
+              </p>
+            </div>
+          </div>
+          <div class="right clearfix">
+            <div class="content">
+              <h3>Other Language </h3>
+              <p>
+                Learned German Language as a third language with B1 certificate. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-content pt">
+          <div class="year">2020</div>
+          <div class="left clearfix">
+            <div class="content">
+              <h3>Covid-19 Pandamic</h3>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-content pt">
+          <div class="year">2021</div>
+          <div class="right clearfix">
+            <div class="content">
+              <h3>Career Shift</h3>
+              <p>
+                Made the biggest decision of my life, which was to enter the field of programming , the start was a recap C++</p>
+            </div>
+          </div>
+          <div class="left clearfix">
+            <div class="content">
+              <h3>Go On </h3>
+              <p>
+                Python programming languge certificate .
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-content pt">
+          <div class="year">2022</div>
+          <div class="right clearfix">
+            <div class="content">
+              <h3>A Developer</h3>
+              <p>
+                FrontEnd Developer and going to be a FullStack Developer SOON.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div class="testimonials">
+        <h2><span class="color1">TESTIM</span>ONIALS</h2>
+        <div class="testimonials-content">
+          <div class="ts-box left-ts-box">
+            <p>
+              I am happy with the wonderfully designed website with great
+              functionality, compared to the rest of the companies, the infinite
+              accuracy with the speed of delivery and the great price you are in
+              the forefront
+            </p>
+            <div class="person-testimony">
+              <img src="Images/p2.png" alt="" />
+              <div class="person-info">
+                <span>Anya</span>
+                <p>CEO at company 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="ts-box center-ts-box">
+            <p>
+              I am happy with the wonderfully designed website with great
+              functionality, compared to the rest of the companies, the infinite
+              accuracy with the speed of delivery and the great price you are in
+              the forefront
+            </p>
+            <div class="person-testimony">
+              <img src="Images/p1.png" alt="" />
+              <div class="person-info">
+                <span>George</span>
+                <p>CEO at company 2</p>
+              </div>
+            </div>
+          </div>
+          <div class="ts-box right-ts-box">
+            <p>
+              I am happy with the wonderfully designed website with great
+              functionality, compared to the rest of the companies, the infinite
+              accuracy with the speed of delivery and the great price you are in
+              the forefront
+            </p>
+            <div class="person-testimony">
+              <img src="Images/p4.png" alt="" />
+              <div class="person-info">
+                <span>Lia</span>
+                <p>CEO at company 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-overlay"></div>
+        <div class="contact">
+          <h2 class="contact-header">Contact</h2>
+          <div class="contact-area">
+            <form>
+              <h2>*Github Doesn't Support Integrated Website Hosting</h2>
+              <div class="form-parts">
+                <div class="left-form">
+                  <input type="text" placeholder="Your Name" name="username" />
+                  <input type="text" placeholder="Your Phone Number" name="number" />
+                  <input type="email" placeholder="Your Email" name="email" />
+                  <input type="text" placeholder="Subject" name="Subject" />
+                </div>
+                <div class="right-form">
+                  <textarea name="messge" placeholder="Your Message"></textarea>
+                  <input type="submit" value="Submit" />
+                </div>
+            </div>
+            </form>
+            <div class="direct-contact">
+              <h2>Direct Contact</h2>
+              <div class="contact-info">
+                <a href="https://www.google.com" class="noevent"> <i class="fa-solid fa-phone"> <span>+962-785655746</span></i> </a>
+                <a href="mailto:suhaib.abualhijaa@gmail.com" target="_blank"> <i class="fa-solid fa-envelope"> <span>Suhaib.abualhijaa@gmail.com</span></i> </a>
+                <a href="https://github.com/Abualhija/My-Repository" target="_blank"> <i class="fa-brands fa-github-square"> <span>Github/Repositorries</span></i> </a>
+                <a href="https://www.linkedin.com/in/suhaib-abedalla/" target="_blank"> <i class="fa-brands fa-linkedin"> <span>Linkedin/suhaib-abedalla</span></i> </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
+        <div  class='footer'>
+          <p class='footer-body'>Copyrights © <span class="date-year"></span>.<span><a href = "mailto:suhaib.abualhijaa@gmail.com">Suhaib AbedAlla</a>
+          </span></p>
+          <div class="links-footer">
+            <a href="https://www.linkedin.com/in/suhaib-abedalla/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Abualhija/My-Repository" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+          </div>
+        </div>
+    
+      
+      </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
