@@ -71,8 +71,7 @@ let projectsDataSet = {
     imageLink: "Images/projectsPopup/carsShowRoomPOP.jpg",
     discription:
       "The system contains all process needed by any car showroom like employees issues , simulating the selling and buying cars operations ,and reflecting all bank account operations.provides Accessibility for each employee with a permission to access and modify a certain data according to the nature of employee's work Has a full email system for all employees.",
-    demoLink:
-      "https://github.com/Abualhija/My-Repository/tree/main/Python/Cars%20Showroom",
+    demoLink: "No Demo",
     "Source code":
       "https://github.com/Abualhija/My-Repository/tree/main/Python/Cars%20Showroom",
   },
@@ -259,22 +258,22 @@ fixedNavbar.forEach(function (span) {
   span.addEventListener("click", function (e) {
     if (e.target.dataset.display === "not-fixed") {
       navBar.classList.remove("fixed");
-      bulletsNav.style.display = "block";
-      document
-        .querySelector(".bullets-option span[data-display=show]")
-        .classList.add("active");
-      document
-        .querySelector(".bullets-option span[data-display=hide]")
-        .classList.remove("active");
+      // bulletsNav.style.display = "block";
+      // document
+      //   .querySelector(".bullets-option span[data-display=show]")
+      //   .classList.add("active");
+      // document
+      //   .querySelector(".bullets-option span[data-display=hide]")
+      //   .classList.remove("active");
     } else {
       navBar.classList.add("fixed");
-      bulletsNav.style.display = "none";
-      document
-        .querySelector(".bullets-option span[data-display=show]")
-        .classList.remove("active");
-      document
-        .querySelector(".bullets-option span[data-display=hide]")
-        .classList.add("active");
+      // bulletsNav.style.display = "none";
+      // document
+      //   .querySelector(".bullets-option span[data-display=show]")
+      //   .classList.remove("active");
+      // document
+      //   .querySelector(".bullets-option span[data-display=hide]")
+      //   .classList.add("active");
     }
     activeClass(e);
   });
@@ -399,9 +398,13 @@ imagesGallery.forEach(function (e) {
     let projecLinks = document.createElement("div");
     projecLinks.className = "project-links";
     projecDetails.appendChild(projecLinks);
-
     let demoLink = document.createElement("a");
-    demoLink.className = "demo-link";
+    if (projectsDataSet[dataIndex].demoLink === "No Demo") {
+      demoLink.className = "demo-link no-demo";
+    } else {
+      demoLink.className = "demo-link";
+    }
+
     demoLink.target = "_blank";
     demoLink.href = projectsDataSet[dataIndex]["demoLink"];
     demoLink.innerHTML = "Demo";
@@ -427,6 +430,19 @@ imagesGallery.forEach(function (e) {
   });
 });
 
+let imgBox = document.querySelectorAll(".image-box img");
+
+imgBox.forEach(function (e) {
+  e.addEventListener("click", function () {
+    let noDemo = document.querySelectorAll(".no-demo");
+    if ( noDemo ){
+      noDemo.forEach(function (f) {
+        f.remove();
+      });
+    }
+  });
+}
+);
 //////////////*************************+////////////////////// -->
 
 /* Preventing scroll when popup is show*/
@@ -461,13 +477,21 @@ document.querySelector(".date-year").innerHTML = new Date().getFullYear();
 /* Change color of navbar when scrolling */
 let navBarElements = document.querySelectorAll(".change-nav-colors > div");
 let navBarLinks = document.querySelectorAll("ul.links li a");
-
+let navBullets = document.querySelectorAll(".navBullets .bullet");
 window.addEventListener("scroll", function () {
   navBarElements.forEach(function (e) {
     if (window.scrollY > e.offsetTop - 200) {
       if (window.scrollY < e.offsetTop + e.offsetHeight) {
         navBarLinks.forEach(function (f) {
           if (f.dataset.section === `.${e.classList[0]}`) {
+            // changing the navBullets color based on active section
+            navBullets.forEach(function (g) {
+              if (g.dataset.section === f.dataset.section) {
+                g.classList.add("active");
+              } else {
+                g.classList.remove("active");
+              }
+            });
             document
               .querySelector("ul.links li a.active")
               .classList.remove("active");
@@ -480,3 +504,22 @@ window.addEventListener("scroll", function () {
 });
 
 /* ---END--- Change color of navbar when scrolling */
+
+changeInnerHTML();
+function changeInnerHTML() {
+  let screenWidth = window.innerWidth;
+  screenWidth = window.innerWidth;
+  if (screenWidth < 670) {
+    document.querySelector(
+      ".introduction-text h1"
+    ).innerHTML = `<h1>I'm a <span> Creative</span><br>Web Developer</h1>`;
+  } else {
+    document.querySelector(
+      ".introduction-text h1"
+    ).innerHTML = `<h1>I'm a <span> Creative</span> Web Developer</h1>`;
+  }
+}
+
+window.addEventListener("resize", () => {
+  changeInnerHTML();
+});
