@@ -13,6 +13,18 @@ startbutton.addEventListener("click", function () {
   document.querySelector(".start-button").style.display = "none";
   document.querySelector(".tries span").innerHTML = 0;
 
+  /* giving 5 seconds to player before start the game to see all cards */
+  let firstSight = document.querySelectorAll(".card-block");
+
+  firstSight.forEach((card) => {
+    card.classList.add("rotate");
+    setTimeout(function () {
+      firstSight.forEach((card) => {
+        card.classList.remove("rotate");
+      });
+    }, 5000);
+  });
+
   // or
   // document.querySelector('.start-button').remove();
 });
@@ -66,7 +78,7 @@ function flipCard(card) {
   if (all_flipped_cards.length === 2) {
     stopClick();
     checkMatched(all_flipped_cards[0], all_flipped_cards[1]);
-    checkEnd()
+    checkEnd();
   }
 }
 
@@ -97,17 +109,16 @@ function checkMatched(firstCard, secondCard) {
   }
 }
 
-function checkEnd(){
+function checkEnd() {
   let matched_num = document.querySelectorAll(".matched").length;
-  if(matched_num === blocks.length){
+  if (matched_num === blocks.length) {
     document.querySelector(".end-button").style.display = "block";
-    document.querySelector(".end-button").style.background='rgba(0, 0, 0, 0.9)';
+    document.querySelector(".end-button").style.background =
+      "rgba(0, 0, 0, 0.9)";
   }
 }
 
 let restart_button = document.querySelector(".restart");
 restart_button.addEventListener("click", function () {
   location.reload();
-}
-);
-
+});
