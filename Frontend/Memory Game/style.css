@@ -20,7 +20,8 @@
 .end-button {
   display: none;
 }
-.start-button span ,.end-button span.restart  {
+.start-button span,
+.end-button span.restart {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -34,7 +35,7 @@
   border-radius: 30%/90%;
   cursor: pointer;
 }
-.end-button p{
+.end-button p {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -42,15 +43,12 @@
   color: #fff;
   font-size: 3em;
   font-weight: bold;
-  
-  
 }
 
 .end-button span.restart {
   background-color: #4caf50;
   font-size: 2em;
   margin-top: 50px;
-
 }
 
 .end-button span.close {
