@@ -3,34 +3,34 @@
 const words = [
   "Hello",
   "Code",
-  // "Town",
-  // "Funny",
-  // "Programming",
-  // "Javascript",
-  // "Country",
-  // "Testing",
-  // "Youtube",
-  // "Linkedin",
-  // "Twitter",
-  // "Github",
-  // "Leetcode",
-  // "Internet",
-  // "Python",
-  // "Scala",
-  // "Destructuring",
-  // "Paradigm",
-  // "Styling",
-  // "Cascade",
-  // "Documentation",
-  // "Coding",
-  // "Working",
-  // "Dependencies",
-  // "Task",
-  // "Runner",
-  // "Roles",
-  // "Test",
-  // "Rust",
-  // "Playing",
+  "Town",
+  "Funny",
+  "Programming",
+  "Javascript",
+  "Country",
+  "Testing",
+  "Youtube",
+  "Linkedin",
+  "Twitter",
+  "Github",
+  "Leetcode",
+  "Internet",
+  "Python",
+  "Scala",
+  "Destructuring",
+  "Paradigm",
+  "Styling",
+  "Cascade",
+  "Documentation",
+  "Coding",
+  "Working",
+  "Dependencies",
+  "Task",
+  "Runner",
+  "Roles",
+  "Test",
+  "Rust",
+  "Playing",
 ];
 
 // Picking play level
@@ -88,7 +88,6 @@ function startGame(level) {
 
   // The main Function to generate words and everything
   function generateWords() {
-
     // Generating random word
     let randomWord = words[Math.floor(Math.random() * words.length)];
     let wordIndex = words.indexOf(randomWord);
@@ -116,7 +115,6 @@ function startGame(level) {
       divElement.appendChild(divText);
       upcomingWords.appendChild(divElement);
     }
-
     //starting the game
     startPlay();
   }
@@ -125,22 +123,17 @@ function startGame(level) {
     // reset time after each word
     timeLeftSpan.innerHTML = defaultLevelTime;
     let start = setInterval(function () {
-
       // Decrease time
       timeLeftSpan.innerHTML--;
-
-      // Check the word is typed correctly or not at 0 time 
+      // Check the word is typed correctly or not at 0 time
       if (timeLeftSpan.innerHTML === "0") {
-
-        // stopping timer at zero 
+        // stopping timer at zero
         clearInterval(start);
-
         if (
           wordToPrint.innerHTML.toLowerCase() === inputArea.value.toLowerCase()
         ) {
           // empty input for next word
           inputArea.value = "";
-
           // increase score
           scoreGot.innerHTML++;
           if (words.length > 0) {
@@ -154,19 +147,15 @@ function startGame(level) {
               "Congratulations, You Typed All Words Correctly"
             );
             span.appendChild(spanText);
-
             let span2 = document.createElement("span");
             span2.addEventListener("click", function () {
               location.reload();
             });
-
             span2.className = "reset-button";
             let spanText2 = document.createTextNode("Reset Game");
             span2.appendChild(spanText2);
-
             finishMessage.appendChild(span);
             finishMessage.appendChild(span2);
-
             upcomingWords.remove();
           }
         } else {
@@ -174,8 +163,8 @@ function startGame(level) {
           let span = document.createElement("span");
           span.className = "failure";
           let spanText = document.createTextNode("Game Over , Wrong Word !");
+          // document.querySelector('.total-score').inn
           span.appendChild(spanText);
-
           let span2 = document.createElement("span");
           span2.addEventListener("click", function () {
             location.reload();
@@ -183,7 +172,6 @@ function startGame(level) {
           span2.className = "reset-button";
           let spanText2 = document.createTextNode("Reset Game");
           span2.appendChild(spanText2);
-
           finishMessage.appendChild(span);
           finishMessage.appendChild(span2);
         }
@@ -191,4 +179,3 @@ function startGame(level) {
     }, 1000);
   }
 }
-
