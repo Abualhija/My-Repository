@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Using an attribute selector, how would you select an <a> element with a \"title\" attribute?",
+    "answer_1": "a[title]{...}",
+    "answer_2": "a > title {...}",
+    "answer_3": "To Add Breakline",
+    "answer_4": "a.title {...}",
+    "right_answer": "a[title]{...}"
+  },
+  {
+    "title": "What is the CSS selector for an <a> tag containing the title attribute?",
+    "answer_1": "a[title]",
+    "answer_2": "a > title",
+    "answer_3": "a[title]",
+    "answer_4": "a=title",
+    "right_answer": "a[title]"
+  },
+  {
+    "title": "What is the line-height property primarily used for?",
+    "answer_1": "to control the height of the character size",
+    "answer_2": "to control the height of the space between two lines of content",
+    "answer_3": "Customizing It With Font-Weight Property In CSS",
+    "answer_4": "to control the width of the space between characters",
+    "right_answer": "to control the height of the space between two lines of content"
+  },
+  {
+    "title": "What is not true about class selectors?",
+    "answer_1": "An element can have multiple class value",
+    "answer_2": "Class selectors are marked with a leading period",
+    "answer_3": "More than one element can have the same class value",
+    "answer_4": "Only one class value can be assigned to an element",
+    "right_answer": "Only one class value can be assigned to an element"
+  },
+  {
+    "title": "There are many properties that can be used to align elements and create page layouts such as float, position, flexbox and grid. Of these four properties, which one should be used to align a global navigation bar which stays fixed at the top of the page?",
+    "answer_1": "flexbox",
+    "answer_2": "grid",
+    "answer_3": "position",
+    "answer_4": "float",
+    "right_answer": "position"
+  },
+  {
+    "title": "When using media queries, media types are used to target a device category. Which choice lists current valid media types?",
+    "answer_1": "print, screen, aural",
+    "answer_2": "print, screen, television",
+    "answer_3": "print, screen, speech",
+    "answer_4": "print, speech, device",
+    "right_answer": "print, screen, speech"
+  },
+  {
+    "title": "Which choice would give a block element rounded corners?\n\n<div style='margin-bottom: 2rem;'>Div 1</div>\n<div style='margin-top: 2rem;'>Div 2</div>",
+    "answer_1": "2rem",
+    "answer_2": "32px",
+    "answer_3": "64px",
+    "answer_4": "4rem",
+    "right_answer": "2rem"
+  },
+  {
+    "title": "How would you make the first letter of every paragraph on the page red?",
+    "answer_1": "p:first-letter { color: red; }",
+    "answer_2": "p::first-letter { color: red; }",
+    "answer_3": "first-letter:p { color: red; }",
+    "answer_4": "first-letter::p { color: red; }",
+    "right_answer": "p::first-letter { color: red; }"
+  },
+  {
+    "title": "Which choice would give a block element rounded corners?",
+    "answer_1": "border-radius: 10px;",
+    "answer_2": "corner-curve: 10px;",
+    "answer_3": "border-corner: 10px;",
+    "answer_4": "corner-radius: 10px;",
+    "right_answer": "border-radius: 10px;"
+  },
+  {
+    "title": "The values for the font-weight property can be keywords or numbers. For each numbered value below, what is the associated keyword?",
+    "answer_1": "bold; normal",
+    "answer_2": "normal; bold",
+    "answer_3": "light; normal",
+    "answer_4": "normal; bolder",
+    "right_answer": "normal; bold"
+  }
+]

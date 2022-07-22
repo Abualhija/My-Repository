@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="quiz-choice-container">
+        <h2>Please Choose The Quiz Subject</h2>
+        <span data-subject="html">HTML</span>
+        <span data-subject="css">CSS</span>
+        <span data-subject="javascript">Javascript</span>
+        <span data-subject="python">Python</span>
+      </div>
+    </div>
+    <div class="quiz-app-container">
+      <div class="quiz-info">
+        <div class="category">Category : <span></span></div>
+        <div class="questions-count">Questions Count : <span></span></div>
+      </div>
+      <div class="quiz-area"></div>
+      <div class="answers-container">
+        <div class="answers-area"></div>
+      </div>
+      <button class="submit-answer">Submit Answer</button>
+      <div class="questions-nav">
+        <div class="spans"></div>
+        <div class="time-count"></div>
+      </div>
+      <div class="result">
+        <span class="fMsg">Perfect</span>, You Had
+        <span class="totR">5</span> correct Answers Out Of
+        <span class="totQ">5</span> Questions.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
