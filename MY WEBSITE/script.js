@@ -75,6 +75,15 @@ let projectsDataSet = {
     "Source code":
       "https://github.com/Abualhija/My-Repository/tree/main/Python/Cars%20Showroom",
   },
+  10: {
+    title: "HTML / CSS / Javascript",
+    imageLink: "Images/projectsPopup/QuizPOP.png",
+    discription:
+      "Created a Quiz website that contains many sections to test the knowladge of a programmer , restrictions are made against copy and pasting code.",
+    demoLink: "https://abualhija.github.io/Front-End/Quizz/index.html",
+    "Source code":
+      "https://github.com/Abualhija/My-Repository/tree/main/Frontend/Quiz",
+  },
 };
 let container = document.querySelector(".main-container");
 
